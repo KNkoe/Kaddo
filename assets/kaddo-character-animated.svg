@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="460" viewBox="0 0 512 460" role="img" aria-labelledby="title desc">
+  <title id="title">Kaddo, alive</title><desc id="desc">The lime Kaddo character breathes gently, makes small curious tilts, and occasionally double blinks. Reduced motion displays a still character.</desc>
+  <defs>
+    <radialGradient id="lime" cx="29%" cy="19%" r="93%" fx="25%" fy="17%">
+      <stop stop-color="#e5ffb2"/><stop offset=".37" stop-color="#b8e875"/><stop offset=".74" stop-color="#88bb56"/><stop offset="1" stop-color="#3e7950"/>
+    </radialGradient>
+    <radialGradient id="specular" cx="29%" cy="16%" r="54%">
+      <stop stop-color="#f7ffe1" stop-opacity=".54"/><stop offset=".6" stop-color="#f1ffd8" stop-opacity=".12"/><stop offset="1" stop-color="#f1ffd8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="occlusion" cx="81%" cy="91%" r="66%">
+      <stop stop-color="#315e3e" stop-opacity=".35"/><stop offset="1" stop-color="#315e3e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2=".65" y2="1"><stop stop-color="#f1ffd0" stop-opacity=".85"/><stop offset=".5" stop-color="#d7f6a5" stop-opacity=".16"/><stop offset="1" stop-color="#305e39" stop-opacity=".24"/></linearGradient>
+    <linearGradient id="eye" x1="0" y1="0" x2=".4" y2="1"><stop stop-color="#15251b"/><stop offset="1" stop-color="#354730"/></linearGradient>
+    <linearGradient id="smile" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#294526"/><stop offset="1" stop-color="#466335"/></linearGradient>
+    <clipPath id="body"><rect x="-230" y="-193.2" width="460" height="386.4" rx="174.8"/></clipPath>
+  </defs>
+  <style>
+    .float{animation:float 12s ease-in-out infinite;transform-origin:256px 400px}
+    .breathe{animation:breathe 4s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
+    .eyes{animation:blink 8s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(-1.5deg)}25%{transform:translateY(-2px) rotate(.3deg)}75%{transform:translateY(1px) rotate(-3.3deg)}}
+    @keyframes breathe{0%,100%{transform:scale(1)}25%{transform:scale(1.006,.991)}75%{transform:scale(.994,1.009)}}
+    @keyframes blink{0%,64.375%,67.5%,69.875%,72.125%,100%{transform:scaleY(1)}65.9375%,71%{transform:scaleY(.035)}}
+    @media(prefers-reduced-motion:reduce){.float,.breathe,.eyes{animation:none}}
+  </style>
+  <g class="float"><g transform="translate(256 230)"><g class="breathe">
+    <rect x="-230" y="-193.2" width="460" height="386.4" rx="174.8" fill="url(#lime)"/>
+    <g clip-path="url(#body)">
+      <rect x="-230" y="-193.2" width="460" height="386.4" fill="url(#specular)"/>
+      <rect x="-230" y="-193.2" width="460" height="386.4" fill="url(#occlusion)"/>
+      <rect x="-229" y="-192.2" width="458" height="384.4" rx="173.8" fill="none" stroke="url(#rim)" stroke-width="2"/>
+    </g>
+    <g class="eyes">
+      <g fill="#e8ffb8" opacity=".45" transform="translate(0 1.8)"><rect x="-80.5" y="-62.1" width="39.1" height="87.4" rx="19.55"/><rect x="41.4" y="-62.1" width="39.1" height="87.4" rx="19.55"/></g>
+      <g fill="url(#eye)" stroke="#3c6538" stroke-opacity=".35" stroke-width="1.5"><rect x="-80.5" y="-62.1" width="39.1" height="87.4" rx="19.55"/><rect x="41.4" y="-62.1" width="39.1" height="87.4" rx="19.55"/></g>
+      <g fill="#e5f2c9" opacity=".17"><ellipse cx="-68" cy="-46" rx="5" ry="8"/><ellipse cx="53.9" cy="-46" rx="5" ry="8"/></g>
+    </g>
+    <path d="M-36.8 89.4 Q0 104 36.8 89.4" fill="none" stroke="#d9f6a0" stroke-opacity=".48" stroke-width="16.1" stroke-linecap="round"/>
+    <path d="M-36.8 87.4 Q0 102 36.8 87.4" fill="none" stroke="url(#smile)" stroke-width="16.1" stroke-linecap="round"/>
+  </g></g></g>
+</svg>
